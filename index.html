@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sydney Small — Vocalist for Private Events, Weddings &amp; Celebrations</title>
+<meta name="description" content="Sydney Small is a professional singer available for weddings, private parties, corporate events, and intimate performances. Explore her portfolio and book her for your next event.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14120f;
+    --ink-soft:#3d3a34;
+    --cream:#faf7f1;
+    --cream-dim:#f1ece2;
+    --gold:#b48a4a;
+    --gold-soft:#d9bd8f;
+    --line:rgba(20,18,15,.12);
+    --serif:'Cormorant Garamond', Georgia, serif;
+    --sans:'Inter', -apple-system, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.65;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,247,241,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 24px;max-width:1120px;margin:0 auto;
+  }
+  .brand{
+    font-family:var(--serif);
+    font-size:1.55rem;font-weight:600;letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .brand span{color:var(--gold)}
+  nav ul{display:flex;gap:36px;list-style:none;align-items:center}
+  nav a{
+    font-size:.8rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-soft);padding:6px 0;position:relative;transition:color .25s;
+  }
+  nav a::after{
+    content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
+    background:var(--gold);transition:width .3s;
+  }
+  nav a:hover{color:var(--ink)}
+  nav a:hover::after{width:100%}
+  nav a.cta{
+    border:1px solid var(--gold);color:var(--gold);
+    padding:10px 22px;transition:all .3s;
+  }
+  nav a.cta::after{display:none}
+  nav a.cta:hover{background:var(--gold);color:#fff}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(160deg,#191612 0%,#221d16 55%,#2c241a 100%);
+    color:var(--cream);
+    position:relative;overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse 60% 70% at 78% 30%, rgba(180,138,74,.22), transparent 65%);
+  }
+  .hero-inner{
+    position:relative;
+    max-width:1120px;margin:0 auto;padding:130px 24px 140px;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;
+  }
+  .eyebrow{
+    font-size:.75rem;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold-soft);margin-bottom:24px;font-weight:500;
+  }
+  .hero h1{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(3rem,6.5vw,5rem);line-height:1.05;
+    letter-spacing:.01em;margin-bottom:26px;
+  }
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero p{
+    color:rgba(250,247,241,.75);max-width:480px;
+    font-size:1.05rem;font-weight:300;margin-bottom:40px;
+  }
+  .btn-row{display:flex;gap:18px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:15px 36px;
+    font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+    transition:all .3s;
+  }
+  .btn-gold{background:var(--gold);color:#fff;border:1px solid var(--gold)}
+  .btn-gold:hover{background:transparent;color:var(--gold-soft);border-color:var(--gold-soft)}
+  .btn-ghost{border:1px solid rgba(250,247,241,.35);color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
+  .hero-card{
+    border:1px solid rgba(217,189,143,.28);
+    padding:44px 38px;text-align:center;
+    background:rgba(250,247,241,.03);
+  }
+  .hero-card .note{
+    font-family:var(--serif);font-size:3.4rem;color:var(--gold-soft);line-height:1;
+  }
+  .hero-card h3{
+    font-family:var(--serif);font-size:1.6rem;font-weight:500;
+    margin:14px 0 10px;letter-spacing:.03em;
+  }
+  .hero-card p{font-size:.9rem;color:rgba(250,247,241,.65);margin:0;font-weight:300}
+  .hero-card hr{border:none;border-top:1px solid rgba(217,189,143,.25);margin:22px auto;width:56px}
+  .hero-card .stat{display:flex;justify-content:space-around;gap:10px}
+  .hero-card .stat div strong{
+    display:block;font-family:var(--serif);font-size:1.9rem;color:var(--gold-soft);font-weight:500;
+  }
+  .hero-card .stat div span{
+    font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,247,241,.55);
+  }
+
+  /* ---------- Section basics ---------- */
+  section{padding:100px 0}
+  .kicker{
+    font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:16px;
+  }
+  h2{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(2rem,4vw,2.9rem);line-height:1.15;margin-bottom:20px;
+  }
+  .lead{color:var(--ink-soft);max-width:620px;font-weight:300;font-size:1.05rem}
+  .center{text-align:center}
+  .center .lead{margin:0 auto}
+
+  /* ---------- Services ---------- */
+  .services-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;
+  }
+  .svc{
+    background:#fff;border:1px solid var(--line);
+    padding:42px 34px;transition:transform .3s, box-shadow .3s;
+  }
+  .svc:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(20,18,15,.08)}
+  .svc .glyph{
+    font-family:var(--serif);font-size:2rem;color:var(--gold);
+    width:56px;height:56px;border:1px solid var(--gold-soft);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;margin-bottom:24px;
+  }
+  .svc h3{font-family:var(--serif);font-size:1.5rem;font-weight:600;margin-bottom:12px}
+  .svc p{font-size:.93rem;color:var(--ink-soft);font-weight:300}
+
+  /* ---------- About ---------- */
+  .about{background:var(--cream-dim)}
+  .about-inner{
+    display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;
+  }
+  .portrait{
+    aspect-ratio:4/5;position:relative;
+    background:linear-gradient(150deg,#221d16,#3a2f20 60%,#54432a);
+    display:flex;align-items:flex-end;justify-content:center;overflow:hidden;
+  }
+  .portrait::after{
+    content:"S";
+    font-family:var(--serif);font-style:italic;
+    font-size:16rem;color:rgba(217,189,143,.18);line-height:.8;
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  }
+  .portrait .caption{
+    position:relative;z-index:1;width:100%;
+    padding:22px;text-align:center;
+    background:linear-gradient(transparent, rgba(20,18,15,.7));
+    color:var(--gold-soft);font-family:var(--serif);font-style:italic;font-size:1.05rem;
+  }
+  .about blockquote{
+    font-family:var(--serif);font-style:italic;font-size:1.35rem;
+    color:var(--ink);border-left:2px solid var(--gold);
+    padding-left:22px;margin:28px 0;
+  }
+  .about p{color:var(--ink-soft);font-weight:300;margin-bottom:18px}
+  .sig{
+    font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--gold);margin-top:8px;
+  }
+
+  /* ---------- Repertoire strip ---------- */
+  .strip{
+    background:#191612;color:var(--cream);padding:64px 0;text-align:center;
+  }
+  .strip p{
+    font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.7rem);
+    font-style:italic;color:var(--gold-soft);max-width:820px;margin:0 auto;
+  }
+  .strip .tags{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px;
+  }
+  .strip .tags span{
+    font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+    border:1px solid rgba(217,189,143,.35);padding:8px 18px;color:rgba(250,247,241,.75);
+  }
+
+  /* ---------- Testimonials ---------- */
+  .testi-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;
+  }
+  .testi{
+    background:#fff;border:1px solid var(--line);padding:38px 32px;
+    display:flex;flex-direction:column;
+  }
+  .testi .stars{color:var(--gold);letter-spacing:.25em;font-size:.85rem;margin-bottom:18px}
+  .testi p{
+    font-family:var(--serif);font-style:italic;font-size:1.1rem;
+    color:var(--ink-soft);flex:1;margin-bottom:22px;
+  }
+  .testi cite{
+    font-style:normal;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink);font-weight:600;
+  }
+  .testi cite small{display:block;color:var(--gold);font-weight:500;margin-top:4px;letter-spacing:.1em}
+
+  /* ---------- Connect / CTA ---------- */
+  .connect{
+    background:linear-gradient(160deg,#191612,#2c241a);color:var(--cream);
+    text-align:center;
+  }
+  .connect h2{color:var(--cream)}
+  .connect .lead{color:rgba(250,247,241,.7)}
+  .socials{
+    display:flex;justify-content:center;gap:16px;margin:40px 0 48px;flex-wrap:wrap;
+  }
+  .socials a{
+    border:1px solid rgba(217,189,143,.4);color:var(--gold-soft);
+    padding:12px 26px;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+    transition:all .3s;
+  }
+  .socials a:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+  .connect .contact-line{
+    font-size:.9rem;color:rgba(250,247,241,.65);font-weight:300;
+  }
+  .connect .contact-line a{color:var(--gold-soft);border-bottom:1px solid rgba(217,189,143,.4)}
+  .connect .contact-line a:hover{color:#fff}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:#121009;color:rgba(250,247,241,.55);
+    padding:48px 0;font-size:.82rem;
+  }
+  .foot{
+    max-width:1120px;margin:0 auto;padding:0 24px;
+    display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  }
+  .foot .brand{font-size:1.1rem;color:var(--cream)}
+  .foot ul{display:flex;gap:26px;list-style:none}
+  .foot a{transition:color .25s}
+  .foot a:hover{color:var(--gold-soft)}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;padding:90px 24px}
+    .hero-card{max-width:440px}
+    .services-grid,.testi-grid{grid-template-columns:1fr;max-width:540px;margin-left:auto;margin-right:auto}
+    .about-inner{grid-template-columns:1fr;gap:44px}
+    .portrait{max-width:420px;margin:0 auto}
+  }
+  @media (max-width:700px){
+    .nav{flex-direction:column;gap:16px;padding:18px 20px}
+    nav ul{gap:22px;flex-wrap:wrap;justify-content:center}
+    section{padding:72px 0}
+    .foot{justify-content:center;text-align:center;flex-direction:column}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="/">Sydney <span>Small</span></a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/connect">Connect</a></li>
+        <li><a class="cta" href="/booking">Book Me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" style="padding:0">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">Vocalist · Live Performer · Storyteller</p>
+        <h1>A voice that turns moments into <em>memories</em>.</h1>
+        <p>From candlelit weddings to sold-out lounges, Sydney Small brings warmth, elegance, and soul to every stage. Book her for your next private event and give your guests a night they'll never stop talking about.</p>
+        <div class="btn-row">
+          <a class="btn btn-gold" href="/booking">Book Sydney</a>
+          <a class="btn btn-ghost" href="/portfolio">Hear the Voice</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="note">♪</div>
+        <h3>Now Booking Private Events</h3>
+        <p>Weddings · Galas · Corporate Evenings · Intimate Parties</p>
+        <hr>
+        <div class="stat">
+          <div><strong>200+</strong><span>Events Sung</span></div>
+          <div><strong>10 yrs</strong><span>On Stage</span></div>
+          <div><strong>5★</strong><span>Client Rated</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="wrap center">
+      <p class="kicker">What I Offer</p>
+      <h2>Live Vocals, Tailored to Your Occasion</h2>
+      <p class="lead">Every event has its own rhythm. I work closely with you to craft a set that fits the mood, the moment, and the people in the room.</p>
+      <div class="services-grid" style="text-align:left">
+        <article class="svc">
+          <div class="glyph">♫</div>
+          <h3>Weddings &amp; Ceremonies</h3>
+          <p>First dances, processionals, and cocktail-hour sets sung live. I'll learn your song — the one that means everything — and deliver it flawlessly on your day.</p>
+        </article>
+        <article class="svc">
+          <div class="glyph">♪</div>
+          <h3>Private &amp; Corporate Events</h3>
+          <p>Sophisticated live music for galas, holiday parties, product launches, and dinners. Full sets with backing tracks or live accompaniment, scaled to your venue.</p>
+        </article>
+        <article class="svc">
+          <div class="glyph">♬</div>
+          <h3>Intimate Performances</h3>
+          <p>Anniversaries, proposals, milestone birthdays. A stripped-back, up-close performance that makes a small gathering feel unforgettable.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="wrap about-inner">
+      <div class="portrait">
+        <div class="caption">Sydney Small — live at The Velvet Room</div>
+      </div>
+      <div>
+        <p class="kicker">About Sydney</p>
+        <h2>Singing has never been a performance. It's a conversation.</h2>
+        <blockquote>"My job isn't to fill a room with sound — it's to fill it with feeling."</blockquote>
+        <p>I've spent the last decade singing everywhere from church halls to hotel ballrooms, jazz lounges to backyard weddings. My range moves easily between soul, jazz standards, R&amp;B, pop, and timeless ballads — always delivered with polish and heart.</p>
+        <p>When you book me, you're not just hiring a singer. You're getting a professional who shows up early, reads the room, honors your requests, and treats your event like it's the only one on the calendar. Because that night, it is.</p>
+        <p class="sig">— Sydney Small</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repertoire strip -->
+  <div class="strip">
+    <div class="wrap">
+      <p>"From Etta James to Adele, Sinatra standards to modern soul — the setlist bends to your evening, never the other way around."</p>
+      <div class="tags">
+        <span>Soul</span><span>Jazz Standards</span><span>R&amp;B</span><span>Pop</span><span>Ballads</span><span>Motown</span><span>Acoustic</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="wrap center">
+      <p class="kicker">Kind Words</p>
+      <h2>What Clients Are Saying</h2>
+      <div class="testi-grid" style="text-align:left">
+        <article class="testi">
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p>"Sydney sang our first dance and there wasn't a dry eye in the room — including ours. She learned our song in a week and made it sound like it was written for her."</p>
+          <cite>Maya &amp; Jordan T.<small>Wedding, June 2024</small></cite>
+        </article>
+        <article class="testi">
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p>"We've hired entertainment for our annual gala for eight years. Sydney is the first performer our board asked us to re-book before the night was even over."</p>
+          <cite>Denise Okafor<small>Events Director, Harbor &amp; Vine</small></cite>
+        </article>
+        <article class="testi">
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p>"I booked Sydney to surprise my wife for our 25th anniversary dinner. Twelve guests, one voice, pure magic. Professional from the first email to the final note."</p>
+          <cite>Robert Ellison<small>Private Anniversary Event</small></cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect / CTA -->
+  <section class="connect" id="connect">
+    <div class="wrap">
+      <p class="kicker" style="color:var(--gold-soft)">Let's Make Music Together</p>
+      <h2>Follow Along, Then Let's Talk</h2>
+      <p class="lead">Catch clips from recent performances, behind-the-scenes moments, and new covers on my socials — or head straight to booking to check my availability.</p>
+      <div class="socials">
+        <a href="/connect">Instagram</a>
+        <a href="/connect">YouTube</a>
+        <a href="/connect">TikTok</a>
+        <a href="/connect">Spotify</a>
+      </div>
+      <div class="btn-row" style="justify-content:center;margin-bottom:36px">
+        <a class="btn btn-gold" href="/booking">Check Availability</a>
+        <a class="btn btn-ghost" href="/portfolio">View Full Portfolio</a>
+      </div>
+      <p class="contact-line">Booking inquiries: <a href="mailto:bookings@sydneysmall.com">bookings@sydneysmall.com</a> &nbsp;·&nbsp; (555) 214-8890</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <a class="brand" href="/">Sydney <span>Small</span></a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/booking">Book Me</a></li>
+      <li><a href="/connect">Connect</a></li>
+    </ul>
+    <p>&copy; 2025 Sydney Small. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script async src="https://api.tibly.ai/widget/v1.js"></script>
+</body>
+</html>
